@@ -50,13 +50,14 @@ let arr = [
     //Write your code here, just console.log
     console.log();
     console.log("After removing the object where the profession is admin.")
-    let filtered_arr = arr.filter(function (val) {
-        if (val.profession !== "admin") {
-          return val;
+   for(let i in arr){
+        if(arr[i].profession=="admin")
+        {
+            delete arr[i];
         }
-      });
-      for(let i in filtered_arr){
-        console.log(filtered_arr[i])
+    }
+    for(let i in arr){
+        console.log(arr[i]);
     }
   }
   
